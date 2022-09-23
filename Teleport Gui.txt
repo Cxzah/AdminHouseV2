@@ -1,0 +1,67 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local GuiName = Instance.new("TextLabel")
+local HouseTeleport = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Credits = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.703236878, 0, 0.277039826, 0)
+Main.Size = UDim2.new(0, 211, 0, 346)
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(34, 34, 34)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.120
+Main.Active = true
+Main.Draggable = true
+
+GuiName.Name = "GuiName"
+GuiName.Parent = Main
+GuiName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GuiName.BackgroundTransparency = 1.000
+GuiName.Position = UDim2.new(0.0236966833, 0, 0, 0)
+GuiName.Size = UDim2.new(0, 200, 0, 50)
+GuiName.Font = Enum.Font.PermanentMarker
+GuiName.Text = "Teleport "
+GuiName.TextColor3 = Color3.fromRGB(255, 255, 255)
+GuiName.TextSize = 30.000
+
+HouseTeleport.Name = "HouseTeleport"
+HouseTeleport.Parent = Main
+HouseTeleport.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+HouseTeleport.Position = UDim2.new(0.0236966833, 0, 0.699422002, 0)
+HouseTeleport.Size = UDim2.new(0, 200, 0, 50)
+HouseTeleport.Font = Enum.Font.PermanentMarker
+HouseTeleport.Text = "Teleport To Pads"
+HouseTeleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+HouseTeleport.TextSize = 30.000
+HouseTeleport.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 28, 83)
+end)
+
+UICorner.CornerRadius = UDim.new(0.300000012, 0)
+UICorner.Parent = HouseTeleport
+
+Credits.Name = "Credits"
+Credits.Parent = Main
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0.0663507134, 0, 0.268786132, 0)
+Credits.Size = UDim2.new(0, 183, 0, 121)
+Credits.Font = Enum.Font.PermanentMarker
+Credits.Text = "MADE BY CORPULAR"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 28.000
